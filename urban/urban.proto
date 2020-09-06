@@ -1,0 +1,13 @@
+syntax = "proto3";
+package urban;
+service UrbanDC{
+    rpc SendDefenitions (NameRequest) returns(stream NameResponse){};
+}
+message NameRequest{
+    string Name=1;
+}
+message NameResponse{
+    string Definition=1;
+    string Example=2;
+    string WrittenOn=3;
+}
